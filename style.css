@@ -1,0 +1,182 @@
+/* --- Reset & Global Styles --- */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+    color: #555;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* --- Main Container --- */
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+
+/* --- Header & Welcome Text --- */
+header {
+    position: relative;
+    /* padding-top is no longer needed as home button is fixed */
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #87CEEB; /* Sky Blue */
+    margin-bottom: 20px;
+}
+
+.home-button {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: 700;
+    color: #87CEEB;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.home-button:hover {
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* --- Section Styles --- */
+.gallery, .journal {
+    margin-top: 70px;
+}
+
+.gallery h3, .journal h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #87CEEB; /* Sky Blue */
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Elegant separator for section titles */
+.gallery h3::before, .journal h3::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #87CEEB;
+}
+
+/* --- Gallery Styles --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(135, 206, 235, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Journal Styles --- */
+.journal-entry {
+    text-align: left;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #87CEEB;
+    transition: background-color 0.3s;
+}
+
+.journal-entry:hover {
+    background-color: #f1f7fb;
+}
+
+.journal-date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.journal-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Footer & Portal Links --- */
+footer {
+    margin-top: 80px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.portal-links {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portal-links a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.portal-links a:hover {
+    color: #fff;
+    background-color: #87CEEB;
+}
