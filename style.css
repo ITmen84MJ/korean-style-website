@@ -46,9 +46,9 @@ header h1 {
     z-index: 1000;
     text-decoration: none;
     font-weight: 700;
-    color: #87CEEB;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #e0e0e0;
+    color: #ffffff; /* White text */
+    background-color: #87CEEB; /* Sky Blue background */
+    border: 1px solid #87CEEB; /* Sky Blue border */
     padding: 8px 18px;
     border-radius: 20px;
     transition: all 0.3s ease;
@@ -57,8 +57,8 @@ header h1 {
 }
 
 .home-button:hover {
-    background-color: #87CEEB;
-    border-color: #87CEEB;
+    background-color: #6cb7e0; /* Slightly darker sky blue on hover */
+    border-color: #6cb7e0;
     color: #ffffff;
     transform: translateY(-2px);
 }
